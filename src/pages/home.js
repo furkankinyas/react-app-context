@@ -43,7 +43,7 @@ export default function HomeNew() {
             setHasMore(false);
             return;
           }
-          setList(list.concat(data.response.results));
+          setList([...list, ...data.response.results]);
           setIsLoading(false);
           setAjaxPage(ajaxPage + 1);
         });
@@ -55,7 +55,7 @@ export default function HomeNew() {
             setHasMore(false);
             return;
           }
-          setList(list.concat(data.response.results));
+          setList([...list, ...data.response.results]);
           setIsLoading(false);
           setAjaxPage(ajaxPage + 1);
         });
